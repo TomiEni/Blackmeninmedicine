@@ -43,6 +43,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 
 /* ─── SHARED NAV ─── */
@@ -57,7 +58,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 68px;
 }
 
 .nav-brand {
@@ -69,7 +70,7 @@ body {
 
 .nav-brand-text {
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: 0.3px;
@@ -82,7 +83,7 @@ body {
 }
 
 .nav-link {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -100,7 +101,7 @@ body {
 }
 
 .nav-ig {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--ink-muted);
@@ -125,30 +126,30 @@ body {
 
 /* ── HERO ── */
 .home-hero {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 108px 48px 78px;
+  padding: 120px 48px 88px;
   text-align: center;
   border-bottom: 1px solid var(--rule);
 }
 
 .home-hero-eyebrow {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .home-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(44px, 7vw, 80px);
+  font-size: clamp(46px, 7vw, 84px);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.01;
   color: var(--ink);
-  margin-bottom: 24px;
-  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+  letter-spacing: -0.7px;
 }
 
 .home-hero-title em {
@@ -161,7 +162,7 @@ body {
   align-items: center;
   gap: 16px;
   justify-content: center;
-  margin: 28px 0;
+  margin: 30px 0 26px;
 }
 
 .home-divider-line {
@@ -178,12 +179,12 @@ body {
 
 .home-hero-sub {
   font-family: 'EB Garamond', serif;
-  font-size: 22px;
+  font-size: 24px;
   font-style: italic;
   color: var(--ink-muted);
-  line-height: 1.6;
-  max-width: 560px;
-  margin: 0 auto 36px;
+  line-height: 1.54;
+  max-width: 590px;
+  margin: 0 auto 42px;
 }
 
 .home-hero-cta {
@@ -194,7 +195,7 @@ body {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 14px 32px;
+  padding: 14px 30px;
   text-decoration: none;
   border-radius: 3px;
   transition: opacity 0.15s, transform 0.15s;
@@ -204,18 +205,18 @@ body {
 
 /* ── MISSION ── */
 .home-mission {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 72px 48px;
+  padding: 84px 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
+  gap: 78px;
   align-items: start;
   border-bottom: 1px solid var(--rule);
 }
 
 .mission-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -225,21 +226,22 @@ body {
 
 .mission-heading {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .mission-body {
   font-family: 'EB Garamond', serif;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 19px;
+  line-height: 1.8;
   color: var(--ink-mid);
+  max-width: 34ch;
 }
 
-.mission-body p + p { margin-top: 14px; }
+.mission-body p + p { margin-top: 18px; }
 
 .mission-stats {
   display: flex;
@@ -248,7 +250,7 @@ body {
 }
 
 .m-stat {
-  padding: 24px 0;
+  padding: 28px 0;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -256,7 +258,7 @@ body {
 
 .m-stat-num {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 700;
   color: var(--ink);
   line-height: 1;
@@ -265,7 +267,7 @@ body {
 }
 
 .m-stat-label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -276,9 +278,9 @@ body {
 
 /* ── SPECIALTY CARDS ── */
 .home-specialties {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 72px 48px;
+  padding: 84px 48px;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -286,18 +288,18 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 500;
   color: var(--ink);
 }
 
 .section-sub {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -313,8 +315,8 @@ body {
 }
 
 .specialty-card {
-  background: var(--parchment);
-  padding: 32px 28px;
+  background: #fbf7f0;
+  padding: 34px 28px;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
   text-decoration: none;
@@ -322,7 +324,7 @@ body {
   position: relative;
 }
 
-.specialty-card:hover { background: var(--parchment-md); transform: translateY(-1px); }
+.specialty-card:hover { background: #f4eee4; transform: translateY(-1px); }
 
 .specialty-card.active-card {
   background: var(--ink);
@@ -342,7 +344,7 @@ body {
 }
 
 .sc-label {
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -353,7 +355,7 @@ body {
 
 .sc-specialty {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--ink);
   display: block;
@@ -377,7 +379,7 @@ body {
 .sc-right { text-align: right; }
 
 .sc-year {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -394,28 +396,29 @@ body {
 
 /* ── ABOUT STRIP ── */
 .home-about {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 72px 48px;
+  padding: 84px 48px;
 }
 
 .about-inner {
-  background: var(--ink);
-  padding: 56px 48px;
+  background: #ece5d8;
+  padding: 44px 42px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 48px;
   align-items: center;
   border-radius: 4px;
+  border: 1px solid var(--rule);
 }
 
 .about-quote {
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
+  font-size: 28px;
   font-style: italic;
   font-weight: 400;
-  color: var(--parchment);
-  line-height: 1.45;
+  color: var(--ink);
+  line-height: 1.38;
 }
 
 .about-quote strong {
@@ -429,7 +432,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   display: block;
   margin-bottom: 16px;
   text-decoration: none;
@@ -439,15 +442,15 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--parchment);
-  color: var(--ink);
-  font-size: 11px;
+  background: var(--ink);
+  color: var(--parchment);
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 11px 20px;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 3px;
   white-space: nowrap;
   transition: opacity 0.15s;
 }
@@ -461,11 +464,11 @@ body {
 /* ── LIST HERO ── */
 .list-hero {
   background: var(--ink);
-  padding: 72px 48px 56px;
+  padding: 86px 48px 60px;
 }
 
 .list-hero-inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -484,7 +487,7 @@ body {
 }
 
 .lhe-text {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -493,23 +496,23 @@ body {
 
 .list-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(38px, 6vw, 68px);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.02;
   color: var(--parchment);
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  letter-spacing: -0.6px;
 }
 
 .list-hero-title em { font-style: italic; }
 
 .list-hero-sub {
   font-family: 'EB Garamond', serif;
-  font-size: 17px;
+  font-size: 19px;
   font-style: italic;
   color: var(--ink-light);
-  line-height: 1.7;
-  max-width: 520px;
+  line-height: 1.72;
+  max-width: 560px;
 }
 
 /* ── STAT STRIP ── */
@@ -519,7 +522,7 @@ body {
 }
 
 .stat-strip-inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 48px;
   display: grid;
@@ -527,7 +530,7 @@ body {
 }
 
 .stat-item {
-  padding: 32px 0;
+  padding: 34px 0 30px;
   text-align: center;
   border-right: 1px solid var(--rule);
 }
@@ -536,7 +539,7 @@ body {
 
 .stat-num {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--ink);
   line-height: 1;
@@ -545,7 +548,7 @@ body {
 }
 
 .stat-desc {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -556,9 +559,9 @@ body {
 
 /* ── HISTORIC BADGE ── */
 .badge-row {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 20px 48px;
+  padding: 22px 48px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -571,8 +574,8 @@ body {
   align-items: center;
   gap: 9px;
   background: var(--ink);
-  padding: 8px 16px;
-  border-radius: 2px;
+  padding: 8px 14px;
+  border-radius: 999px;
 }
 
 .badge-dot {
@@ -584,7 +587,7 @@ body {
 }
 
 .badge-text {
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -593,19 +596,19 @@ body {
 
 .badge-caption {
   font-family: 'EB Garamond', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
   color: var(--ink-muted);
 }
 
 /* ── MAIN CONTENT ── */
 .list-main {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 52px 48px 96px;
+  padding: 56px 48px 104px;
   display: grid;
   grid-template-columns: 1fr 280px;
-  gap: 64px;
+  gap: 72px;
   align-items: start;
 }
 
@@ -614,20 +617,20 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--ink);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ink);
   margin-bottom: 0;
 }
 
 .list-title {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--ink);
 }
 
 .list-meta {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -641,10 +644,10 @@ ul.match-list { list-style: none; }
   grid-template-columns: 28px 1fr;
   gap: 16px;
   align-items: center;
-  padding: 14px 8px;
+  padding: 16px 8px;
   margin: 0 -8px;
   border-bottom: 1px solid var(--parchment-dk);
-  border-radius: 3px;
+  border-radius: 2px;
   transition: background 0.12s;
   cursor: default;
 }
@@ -663,7 +666,7 @@ ul.match-list { list-style: none; }
 
 .match-name {
   font-family: 'Playfair Display', serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--ink);
   display: block;
@@ -672,7 +675,7 @@ ul.match-list { list-style: none; }
 
 .match-school {
   font-family: 'EB Garamond', serif;
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
   color: var(--ink-muted);
   display: block;
@@ -683,14 +686,14 @@ ul.match-list { list-style: none; }
 .sidebar { position: sticky; top: 80px; }
 
 .s-card {
-  background: var(--white);
-  border: 1px solid var(--parchment-dk);
+  background: transparent;
+  border: 1px solid var(--rule);
   padding: 24px;
   margin-bottom: 12px;
 }
 
 .s-label {
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -701,7 +704,7 @@ ul.match-list { list-style: none; }
 
 .s-quote {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 400;
   color: var(--ink);
@@ -734,14 +737,14 @@ ul.match-list { list-style: none; }
 .s-row:last-child { border-bottom: none; }
 
 .s-key {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
   color: var(--ink-muted);
 }
 
 .s-val {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--ink);
 }
@@ -754,7 +757,7 @@ ul.match-list { list-style: none; }
   background: var(--ink);
   text-decoration: none;
   transition: opacity 0.15s;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .s-ig:hover { opacity: 0.85; }
@@ -776,13 +779,13 @@ ul.match-list { list-style: none; }
 
 /* ── FOOTER ── */
 .site-footer {
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--ink);
   background: var(--parchment-md);
-  padding: 36px 48px;
+  padding: 40px 48px;
 }
 
 .footer-inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -793,10 +796,10 @@ ul.match-list { list-style: none; }
 
 .footer-note {
   font-family: 'EB Garamond', serif;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink-muted);
-  line-height: 1.8;
-  max-width: 520px;
+  line-height: 1.75;
+  max-width: 560px;
 }
 
 .footer-brand {
@@ -891,7 +894,7 @@ ul.match-list { list-style: none; }
       <div class="home-divider-line"></div>
     </div>
     <p class="home-hero-sub">
-      A specialty-by-specialty, year-by-year record of Black excellence in medicine — built to last, built to matter.
+      A specialty-by-specialty, year-by-year archive of Black excellence in medicine, built with the permanence of a record rather than the pace of a post.
     </p>
     <a class="home-hero-cta" href="#" onclick="showPage('list'); return false;">Enter the Archive →</a>
   </section>
@@ -902,10 +905,10 @@ ul.match-list { list-style: none; }
       <div class="mission-label">Our Mission</div>
       <h2 class="mission-heading">A Sustainable Archive of Black Excellence in Medicine</h2>
       <div class="mission-body">
-        <p>Black Men in Medicine exists to build and maintain a living archive that documents, celebrates, and amplifies Black excellence across the physician pipeline.</p>
-        <p>This is not a one-time snapshot. The goal is a record that grows with every match cycle, across every major specialty, so that progress remains visible, citable, and impossible to overlook.</p>
-        <p>The archive is designed to carry both celebration and historical weight: it honors the people moving medicine forward while preserving a public record that can be shared, referenced, and built upon over time.</p>
-        <p>Representation matters. Documentation matters too.</p>
+        <p>Black Men in Medicine exists to build and maintain a living archive that documents, celebrates, and preserves Black excellence across the physician pipeline.</p>
+        <p>This is not a one-time snapshot. The goal is a record that expands with every match cycle, across every major specialty, so that progress remains visible, citable, and difficult to ignore.</p>
+        <p>The archive is meant to carry both recognition and historical weight: it honors the people moving medicine forward while preserving a public record that can be referenced over time.</p>
+        <p>Representation matters. A permanent record matters too.</p>
       </div>
     </div>
     <div class="mission-stats">
@@ -1037,7 +1040,7 @@ ul.match-list { list-style: none; }
   <section class="home-about">
     <div class="about-inner">
       <p class="about-quote">
-        "Our goal is to build a <strong>sustainable archive</strong> — every specialty, every year — so that Black excellence in medicine is always on the record."
+        "Every specialty. Every year. A <strong>sustained public record</strong> of Black excellence in medicine."
       </p>
       <div class="about-right">
         <a class="about-handle" href="mailto:blackmeninmedicine@gmail.com">blackmeninmedicine@gmail.com</a>
@@ -1092,7 +1095,7 @@ ul.match-list { list-style: none; }
       <h1 class="list-hero-title">
         27 Black Medical Students<br/><em>Matched into Neurosurgery</em>
       </h1>
-      <p class="list-hero-sub">The most comprehensive record of Black medical students matching into neurological surgery in the 2026 NRMP cycle.</p>
+      <p class="list-hero-sub">A public-facing record of Black medical students who matched into neurological surgery in the 2026 NRMP cycle.</p>
     </div>
   </div>
 
@@ -1120,7 +1123,7 @@ ul.match-list { list-style: none; }
       <div class="badge-dot"></div>
       <span class="badge-text">Highest Proportion Ever Recorded</span>
     </div>
-    <span class="badge-caption">A historic step forward for diversity in neurosurgery</span>
+    <span class="badge-caption">A notable milestone in the neurosurgery training pipeline</span>
   </div>
 
   <!-- Main content -->
@@ -1129,7 +1132,7 @@ ul.match-list { list-style: none; }
     <!-- Roster -->
     <div>
       <div class="list-header">
-        <span class="list-title">Complete Roster · Neurosurgery</span>
+        <span class="list-title">Documented Roster · Neurosurgery</span>
         <span class="list-meta">27 · 2026</span>
       </div>
       <ul class="match-list">
@@ -1167,9 +1170,9 @@ ul.match-list { list-style: none; }
     <aside class="sidebar">
       <div class="s-card">
         <span class="s-label">Why This Matters</span>
-        <p class="s-quote">"The pipeline is shifting. Black Neurosurgeons make up only 3.8% — these 27 are changing that."</p>
+        <p class="s-quote">"A record like this makes progress visible, specific, and harder to overlook."</p>
         <div class="s-rule"></div>
-        <span class="s-attr">Black Men in Medicine · 2026</span>
+        <span class="s-attr">Black Men in Medicine · Archive Note</span>
       </div>
 
       <div class="s-card">
@@ -1203,7 +1206,7 @@ ul.match-list { list-style: none; }
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-note">
-        Data compiled and maintained by Black Men in Medicine. This list represents Black medical students who matched into neurological surgery residency programs in the 2026 NRMP cycle. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
+        Data compiled and maintained by Black Men in Medicine. This list documents Black medical students who matched into neurological surgery residency programs in the 2026 NRMP cycle. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
       </p>
       <div class="footer-brand">
         <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
