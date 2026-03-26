@@ -785,21 +785,22 @@ ul.match-list { list-style: none; }
 }
 
 .footer-inner {
-  max-width: 1040px;
+  max-width: 920px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
+  text-align: center;
 }
 
 .footer-note {
   font-family: 'EB Garamond', serif;
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--ink-muted);
-  line-height: 1.35;
-  max-width: none;
-  white-space: nowrap;
+  line-height: 1.45;
+  max-width: 760px;
+  white-space: normal;
 }
 
 .footer-brand {
@@ -842,8 +843,7 @@ ul.match-list { list-style: none; }
   .list-main { grid-template-columns: 1fr; padding: 36px 24px 64px; gap: 40px; }
   .sidebar { position: static; }
   .site-footer { padding: 28px 24px; }
-  .footer-inner { grid-template-columns: 1fr; gap: 18px; }
-  .footer-note { white-space: normal; }
+  .footer-inner { gap: 18px; }
   .footer-logo { height: 58px; }
 }
 
@@ -1061,7 +1061,8 @@ ul.match-list { list-style: none; }
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-note">
-        © Black Men in Medicine. Founded in 2017. Data compiled and maintained independently. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
+        © Black Men in Medicine. Founded in 2017. Data compiled and maintained independently.<br />
+        For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
       </p>
       <div class="footer-brand">
         <img class="footer-logo" src="logo-reference.png" alt="Black Men in Medicine" />
