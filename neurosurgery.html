@@ -785,7 +785,7 @@ ul.match-list { list-style: none; }
 }
 
 .footer-inner {
-  max-width: 860px;
+  max-width: 1040px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -795,10 +795,11 @@ ul.match-list { list-style: none; }
 
 .footer-note {
   font-family: 'EB Garamond', serif;
-  font-size: 12.5px;
+  font-size: 11.5px;
   color: var(--ink-muted);
-  line-height: 1.5;
-  max-width: 640px;
+  line-height: 1.35;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .footer-brand {
@@ -842,6 +843,7 @@ ul.match-list { list-style: none; }
   .sidebar { position: static; }
   .site-footer { padding: 28px 24px; }
   .footer-inner { grid-template-columns: 1fr; gap: 18px; }
+  .footer-note { white-space: normal; }
   .footer-logo { height: 58px; }
 }
 
