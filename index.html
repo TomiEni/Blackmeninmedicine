@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Black Men in Medicine — Highlighting Black Excellence in Medicine. Tracking Black medical students who matched into residency programs nationwide." />
+<title>Black Men in Medicine | Highlighting Black Excellence in Medicine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --parchment:    #f0ebe0;
+  --parchment-md: #e8e2d6;
+  --parchment-dk: #ddd6c8;
+  --ink:          #0f0d0a;
+  --ink-mid:      #3a3530;
+  --ink-muted:    #6b6358;
+  --ink-light:    #9a9088;
+  --ink-faint:    #c8bfb4;
+  --rule:         #c0b8a8;
+  --white:        #fdfcf9;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── SHARED NAV ─── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--parchment);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.nav-brand-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-link:hover { color: var(--ink); }
+
+.nav-link.active {
+  color: var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+.nav-ig {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--ink-muted);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  padding: 6px 14px;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.nav-ig:hover {
+  background: var(--ink);
+  color: var(--parchment);
+  border-color: var(--ink);
+}
+
+/* ─────────────────────────────────────────
+   HOME PAGE
+───────────────────────────────────────── */
+#home { display: block; }
+#list { display: none; }
+
+/* ── HERO ── */
+.home-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 96px 48px 72px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.home-hero-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 28px;
+}
+
+.home-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.home-hero-title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.home-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin: 28px 0;
+}
+
+.home-divider-line {
+  height: 1px;
+  width: 60px;
+  background: var(--rule);
+}
+
+.home-divider-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--ink-faint);
+}
+
+.home-hero-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+.home-hero-cta {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--parchment);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: opacity 0.15s;
+}
+
+.home-hero-cta:hover { opacity: 0.82; }
+
+/* ── MISSION ── */
+.home-mission {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  border-bottom: 1px solid var(--rule);
+}
+
+.mission-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+}
+
+.mission-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.mission-body {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+
+.mission-body p + p { margin-top: 14px; }
+
+.mission-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.m-stat {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.m-stat:first-child { border-top: 1px solid var(--rule); }
+
+.m-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+  letter-spacing: -1px;
+}
+
+.m-stat-label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 6px;
+  display: block;
+}
+
+/* ── SPECIALTY CARDS ── */
+.home-specialties {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.section-sub {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.specialty-card {
+  background: var(--parchment);
+  padding: 32px 28px;
+  cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.specialty-card:hover { background: var(--parchment-md); }
+
+.specialty-card.active-card {
+  background: var(--ink);
+}
+
+.specialty-card.active-card .sc-specialty,
+.specialty-card.active-card .sc-count,
+.specialty-card.active-card .sc-year,
+.specialty-card.active-card .sc-arrow { color: var(--parchment); }
+
+.specialty-card.active-card .sc-label { color: var(--ink-faint); }
+
+.specialty-card.coming-soon {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.sc-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sc-specialty {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.sc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sc-count {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.sc-right { text-align: right; }
+
+.sc-year {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: block;
+}
+
+.sc-arrow {
+  font-size: 20px;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ── ABOUT STRIP ── */
+.home-about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+
+.about-inner {
+  background: var(--ink);
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.45;
+}
+
+.about-quote strong {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about-right { text-align: right; }
+
+.about-handle {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.about-ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--parchment);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  text-decoration: none;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.about-ig-btn:hover { opacity: 0.85; }
+
+/* ─────────────────────────────────────────
+   LIST PAGE
+───────────────────────────────────────── */
+
+/* ── LIST HERO ── */
+.list-hero {
+  background: var(--ink);
+  padding: 72px 48px 56px;
+}
+
+.list-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.list-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.lhe-line {
+  width: 32px;
+  height: 1px;
+  background: var(--ink-faint);
+  flex-shrink: 0;
+}
+
+.lhe-text {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.list-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--parchment);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.list-hero-title em { font-style: italic; }
+
+.list-hero-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink-light);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* ── STAT STRIP ── */
+.stat-strip {
+  background: var(--parchment-md);
+  border-bottom: 1px solid var(--rule);
+}
+
+.stat-strip-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-item {
+  padding: 32px 0;
+  text-align: center;
+  border-right: 1px solid var(--rule);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+  letter-spacing: -1px;
+}
+
+.stat-desc {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 8px;
+  display: block;
+}
+
+/* ── HISTORIC BADGE ── */
+.badge-row {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--rule);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--ink);
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+
+.badge-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--parchment);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge-text {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--parchment);
+}
+
+.badge-caption {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* ── MAIN CONTENT ── */
+.list-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 52px 48px 96px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── ROSTER ── */
+.list-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 0;
+}
+
+.list-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.list-meta {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+ul.match-list { list-style: none; }
+
+.match-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 8px;
+  margin: 0 -8px;
+  border-bottom: 1px solid var(--parchment-dk);
+  border-radius: 3px;
+  transition: background 0.12s;
+  cursor: default;
+}
+
+.match-item:hover { background: var(--parchment-md); }
+.match-item:hover .match-num { color: var(--ink); }
+
+.match-num {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--ink-faint);
+  text-align: right;
+  letter-spacing: 0.5px;
+  transition: color 0.12s;
+}
+
+.match-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--ink);
+  display: block;
+  line-height: 1.2;
+}
+
+.match-school {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 1px;
+}
+
+/* ── SIDEBAR ── */
+.sidebar { position: sticky; top: 80px; }
+
+.s-card {
+  background: var(--white);
+  border: 1px solid var(--parchment-dk);
+  padding: 24px;
+  margin-bottom: 12px;
+}
+
+.s-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.s-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.s-rule {
+  width: 24px;
+  height: 1.5px;
+  background: var(--ink);
+  margin: 16px 0;
+}
+
+.s-attr {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.s-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--parchment-dk);
+}
+
+.s-row:last-child { border-bottom: none; }
+
+.s-key {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--ink-muted);
+}
+
+.s-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.s-ig {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--ink);
+  text-decoration: none;
+  transition: opacity 0.15s;
+  border-radius: 2px;
+}
+
+.s-ig:hover { opacity: 0.85; }
+.s-ig-inner { display: flex; align-items: center; gap: 10px; }
+
+.s-ig-icon {
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.s-ig-handle { font-size: 12px; font-weight: 400; color: var(--parchment); display: block; }
+.s-ig-sub { font-size: 10px; font-weight: 300; color: var(--ink-light); margin-top: 1px; display: block; }
+.s-ig-arr { font-size: 14px; color: var(--ink-light); }
+
+/* ── FOOTER ── */
+.site-footer {
+  border-top: 2px solid var(--ink);
+  background: var(--parchment-md);
+  padding: 36px 48px;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-note {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-mid);
+  white-space: nowrap;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-hero-eyebrow { animation: fadeUp 0.5s ease both; }
+.home-hero-title   { animation: fadeUp 0.6s 0.07s ease both; }
+.home-hero-sub     { animation: fadeUp 0.6s 0.14s ease both; }
+.home-hero-cta     { animation: fadeUp 0.6s 0.21s ease both; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 860px) {
+  .site-nav { padding: 0 24px; }
+  .home-hero, .home-mission, .home-specialties, .home-about { padding-left: 24px; padding-right: 24px; }
+  .home-mission { grid-template-columns: 1fr; gap: 48px; }
+  .specialty-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-inner { grid-template-columns: 1fr; gap: 28px; }
+  .about-right { text-align: left; }
+  .list-hero { padding: 48px 24px 40px; }
+  .stat-strip-inner { padding: 0 24px; }
+  .badge-row { padding: 16px 24px; }
+  .list-main { grid-template-columns: 1fr; padding: 36px 24px 64px; gap: 40px; }
+  .sidebar { position: static; }
+  .site-footer { padding: 28px 24px; }
+}
+
+@media (max-width: 560px) {
+  .home-hero-title { font-size: 38px; }
+  .list-hero-title { font-size: 34px; }
+  .specialty-grid { grid-template-columns: 1fr; }
+  .stat-strip-inner { grid-template-columns: 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--rule); padding: 22px 0; }
+  .stat-item:last-child { border-bottom: none; }
+  .nav-links { display: none; }
+  .badge-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .section-header { flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="site-nav">
+  <a class="nav-brand" href="#" onclick="showPage('home'); return false;">
+    <svg width="24" height="24" viewBox="0 0 56 56" fill="none">
+      <circle cx="15" cy="9" r="3" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
+      <circle cx="41" cy="9" r="3" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
+      <path d="M15 12 L15 22 Q15 34 28 34" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M41 12 L41 22 Q41 34 28 34" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M28 34 Q28 42 36 42" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <circle cx="36" cy="47" r="5.5" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
+      <circle cx="36" cy="47" r="2.5" fill="#0f0d0a"/>
+    </svg>
+    <span class="nav-brand-text">Black Men in Medicine</span>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link active" id="nav-home" href="#" onclick="showPage('home'); return false;">Home</a>
+    <a class="nav-link" id="nav-list" href="#" onclick="showPage('list'); return false;">Match Lists</a>
+    <a class="nav-ig" href="https://instagram.com/blackmeninmedicine" target="_blank" rel="noopener">@blackmeninmedicine ↗</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════ -->
+<div id="home">
+
+  <!-- Hero -->
+  <section class="home-hero">
+    <div class="home-hero-eyebrow">Highlighting Black Excellence in Medicine</div>
+    <h1 class="home-hero-title">
+      The Living Archive of<br/><em>Black Excellence</em><br/>in American Medicine
+    </h1>
+    <div class="home-divider">
+      <div class="home-divider-line"></div>
+      <span class="home-divider-mark">✦</span>
+      <div class="home-divider-line"></div>
+    </div>
+    <p class="home-hero-sub">
+      A specialty-by-specialty, year-by-year record of every Black medical student who matches into residency — built to last, built to matter.
+    </p>
+    <a class="home-hero-cta" href="#" onclick="showPage('list'); return false;">View 2026 Neurosurgery Match List →</a>
+  </section>
+
+  <!-- Mission -->
+  <section class="home-mission">
+    <div>
+      <div class="mission-label">Our Mission</div>
+      <h2 class="mission-heading">A Sustainable Archive of Black Excellence in Medicine</h2>
+      <div class="mission-body">
+        <p>Black Men in Medicine exists to build and maintain a sustainable archive that documents, celebrates, and amplifies the presence of Black students entering every corner of American medicine — specialty by specialty, year by year, indefinitely.</p>
+        <p>This is not a one-time snapshot. Our goal is to create a living record that grows with every match cycle, across every major specialty, so that the progress of Black physicians in training is always visible, always citable, and never forgotten.</p>
+        <p>In 2026 we began with neurological surgery — 27 Black medical students matched, representing approximately 9.3% of all PGY-1 neurosurgery positions nationwide, the highest proportion ever recorded. More specialties are being compiled now.</p>
+        <p>These numbers matter. Representation matters. And the record must be kept.</p>
+      </div>
+    </div>
+    <div class="mission-stats">
+      <div class="m-stat">
+        <span class="m-stat-num">2026</span>
+        <span class="m-stat-label">Archive launched · Match Day</span>
+      </div>
+      <div class="m-stat">
+        <span class="m-stat-num">12</span>
+        <span class="m-stat-label">Specialties being tracked · 2026</span>
+      </div>
+      <div class="m-stat">
+        <span class="m-stat-num">13K+</span>
+        <span class="m-stat-label">Instagram Followers · @blackmeninmedicine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Cards -->
+  <section class="home-specialties">
+    <div class="section-header">
+      <h2 class="section-title">2026 Match Archive</h2>
+      <span class="section-sub">All Specialties</span>
+    </div>
+    <div class="specialty-grid">
+      <a class="specialty-card active-card" href="#" onclick="showPage('list'); return false;">
+        <span class="sc-label">Available Now</span>
+        <span class="sc-specialty">Neurological Surgery</span>
+        <div class="sc-footer">
+          <span class="sc-count">27</span>
+          <div class="sc-right">
+            <span class="sc-year">Match 2026</span>
+            <span class="sc-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Orthopaedic Surgery</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">General Surgery</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Internal Medicine</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Emergency Medicine</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Dermatology</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Plastic Surgery</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Radiology</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Anaesthesiology</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Obstetrics & Gynaecology</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Psychiatry</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+      <div class="specialty-card coming-soon">
+        <span class="sc-label">Coming Soon</span>
+        <span class="sc-specialty">Paediatrics</span>
+        <div class="sc-footer">
+          <span class="sc-count">—</span>
+          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / CTA Strip -->
+  <section class="home-about">
+    <div class="about-inner">
+      <p class="about-quote">
+        "Our goal is to build a <strong>sustainable archive</strong> — every specialty, every year — so that Black excellence in medicine is always on the record."
+      </p>
+      <div class="about-right">
+        <a class="about-handle" href="https://instagram.com/blackmeninmedicine" target="_blank">@blackmeninmedicine</a>
+        <a class="about-ig-btn" href="https://instagram.com/blackmeninmedicine" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f0d0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="#0f0d0a"/>
+          </svg>
+          Follow on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-note">
+        © 2026 Black Men in Medicine. Data compiled and maintained independently. For citation or institutional use, contact via Instagram: @blackmeninmedicine
+      </p>
+      <div class="footer-brand">
+        <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
+          <circle cx="15" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <circle cx="41" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <path d="M15 12 L15 22 Q15 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M41 12 L41 22 Q41 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 34 Q28 42 36 42" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <circle cx="36" cy="47" r="5.5" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <circle cx="36" cy="47" r="2.5" fill="#3a3530"/>
+        </svg>
+        Black Men in Medicine
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end #home -->
+
+
+<!-- ═══════════════════════════════════════
+     LIST PAGE
+════════════════════════════════════════ -->
+<div id="list">
+
+  <!-- Hero -->
+  <div class="list-hero">
+    <div class="list-hero-inner">
+      <div class="list-hero-eyebrow">
+        <div class="lhe-line"></div>
+        <span class="lhe-text">2026 Match Day · Specialty Series · Neurosurgery</span>
+      </div>
+      <h1 class="list-hero-title">
+        27 Black Medical Students<br/><em>Matched into Neurosurgery</em>
+      </h1>
+      <p class="list-hero-sub">The most comprehensive record of Black medical students matching into neurological surgery in the 2026 NRMP cycle.</p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
+      <div class="stat-item">
+        <span class="stat-num">27</span>
+        <span class="stat-desc">Students Matched</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">~9.3%</span>
+        <span class="stat-desc">of All PGY-1 Positions</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3.8%</span>
+        <span class="stat-desc">Current Black Neurosurgeons</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badge -->
+  <div class="badge-row">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      <span class="badge-text">Highest Proportion Ever Recorded</span>
+    </div>
+    <span class="badge-caption">A historic step forward for diversity in neurosurgery</span>
+  </div>
+
+  <!-- Main content -->
+  <div class="list-main">
+
+    <!-- Roster -->
+    <div>
+      <div class="list-header">
+        <span class="list-title">Complete Roster · Neurosurgery</span>
+        <span class="list-meta">27 · 2026</span>
+      </div>
+      <ul class="match-list">
+        <li class="match-item"><span class="match-num">01</span><div><span class="match-name">Jerry Shepherd</span><span class="match-school">Rush University Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">02</span><div><span class="match-name">Max Saint Germain</span><span class="match-school">University of Miami</span></div></li>
+        <li class="match-item"><span class="match-num">03</span><div><span class="match-name">Jai Horsey</span><span class="match-school">Emory University</span></div></li>
+        <li class="match-item"><span class="match-num">04</span><div><span class="match-name">Kerrie Greene</span><span class="match-school">Northwestern University</span></div></li>
+        <li class="match-item"><span class="match-num">05</span><div><span class="match-name">Martin Green</span><span class="match-school">University of Rochester Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">06</span><div><span class="match-name">Candace Grisham</span><span class="match-school">Barrow Neurological Institute</span></div></li>
+        <li class="match-item"><span class="match-num">07</span><div><span class="match-name">Chi Angiobogu</span><span class="match-school">University of Washington</span></div></li>
+        <li class="match-item"><span class="match-num">08</span><div><span class="match-name">Nicholas Besely</span><span class="match-school">Tufts Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">09</span><div><span class="match-name">Jarius Garner</span><span class="match-school">Morehouse School of Medicine</span></div></li>
+        <li class="match-item"><span class="match-num">10</span><div><span class="match-name">Alyssa Bartlett</span><span class="match-school">Duke University Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">11</span><div><span class="match-name">Barbara Hanna</span><span class="match-school">Duke University Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">12</span><div><span class="match-name">Emamoke Odafe</span><span class="match-school">Louisiana State University</span></div></li>
+        <li class="match-item"><span class="match-num">13</span><div><span class="match-name">Darrian McAfee</span><span class="match-school">University of Chicago</span></div></li>
+        <li class="match-item"><span class="match-num">14</span><div><span class="match-name">Zaynab Sidi Mohammed</span><span class="match-school">University of Colorado</span></div></li>
+        <li class="match-item"><span class="match-num">15</span><div><span class="match-name">Maddy Evans</span><span class="match-school">George Washington University</span></div></li>
+        <li class="match-item"><span class="match-num">16</span><div><span class="match-name">Anoop Chintala</span><span class="match-school">Indiana University</span></div></li>
+        <li class="match-item"><span class="match-num">17</span><div><span class="match-name">Edward Robinson</span><span class="match-school">Morehouse School of Medicine</span></div></li>
+        <li class="match-item"><span class="match-num">18</span><div><span class="match-name">Gobi Bah</span><span class="match-school">University of North Carolina</span></div></li>
+        <li class="match-item"><span class="match-num">19</span><div><span class="match-name">Gabrielle Price</span><span class="match-school">University of North Carolina</span></div></li>
+        <li class="match-item"><span class="match-num">20</span><div><span class="match-name">Destiny Greene</span><span class="match-school">Cedars-Sinai Medical Center</span></div></li>
+        <li class="match-item"><span class="match-num">21</span><div><span class="match-name">Meghan Parker</span><span class="match-school">Johns Hopkins Hospital</span></div></li>
+        <li class="match-item"><span class="match-num">22</span><div><span class="match-name">Kameron Willis</span><span class="match-school">University of Minnesota</span></div></li>
+        <li class="match-item"><span class="match-num">23</span><div><span class="match-name">Collins Mokua</span><span class="match-school">University of Minnesota</span></div></li>
+        <li class="match-item"><span class="match-num">24</span><div><span class="match-name">Henderick François</span><span class="match-school">University at Buffalo</span></div></li>
+        <li class="match-item"><span class="match-num">25</span><div><span class="match-name">Sarah Nanziri</span><span class="match-school">Medical College of Wisconsin</span></div></li>
+        <li class="match-item"><span class="match-num">26</span><div><span class="match-name">Miguel Jimenez</span><span class="match-school">Houston Methodist Hospital</span></div></li>
+        <li class="match-item"><span class="match-num">27</span><div><span class="match-name">Chibueze Agwu</span><span class="match-school">—</span></div></li>
+      </ul>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="s-card">
+        <span class="s-label">Why This Matters</span>
+        <p class="s-quote">"The pipeline is shifting. Black Neurosurgeons make up only 3.8% — these 27 are changing that."</p>
+        <div class="s-rule"></div>
+        <span class="s-attr">Black Men in Medicine · 2026</span>
+      </div>
+
+      <div class="s-card">
+        <span class="s-label">By the Numbers</span>
+        <div class="s-row"><span class="s-key">Total PGY-1 spots</span><span class="s-val">~290</span></div>
+        <div class="s-row"><span class="s-key">Black students matched</span><span class="s-val">27</span></div>
+        <div class="s-row"><span class="s-key">Share of positions</span><span class="s-val">~9.3%</span></div>
+        <div class="s-row"><span class="s-key">Match cycle</span><span class="s-val">2026</span></div>
+      </div>
+
+      <a class="s-ig" href="https://instagram.com/blackmeninmedicine" target="_blank" rel="noopener">
+        <div class="s-ig-inner">
+          <div class="s-ig-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f0ebe0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="#f0ebe0"/>
+            </svg>
+          </div>
+          <div>
+            <span class="s-ig-handle">@blackmeninmedicine</span>
+            <span class="s-ig-sub">Follow for more specialties</span>
+          </div>
+        </div>
+        <span class="s-ig-arr">→</span>
+      </a>
+    </aside>
+
+  </div><!-- end list-main -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-note">
+        Data compiled and maintained by Black Men in Medicine. This list represents Black medical students who matched into neurological surgery residency programs in the 2026 NRMP cycle. For citation, institutional use, or corrections, contact via Instagram: @blackmeninmedicine
+      </p>
+      <div class="footer-brand">
+        <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
+          <circle cx="15" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <circle cx="41" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <path d="M15 12 L15 22 Q15 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M41 12 L41 22 Q41 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 34 Q28 42 36 42" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <circle cx="36" cy="47" r="5.5" stroke="#3a3530" stroke-width="1.8" fill="none"/>
+          <circle cx="36" cy="47" r="2.5" fill="#3a3530"/>
+        </svg>
+        Black Men in Medicine
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end #list -->
+
+<script>
+function showPage(page) {
+  document.getElementById('home').style.display = page === 'home' ? 'block' : 'none';
+  document.getElementById('list').style.display = page === 'list' ? 'block' : 'none';
+  document.getElementById('nav-home').classList.toggle('active', page === 'home');
+  document.getElementById('nav-list').classList.toggle('active', page === 'list');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
