@@ -22,16 +22,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --parchment:    #f7f2e8;
-  --parchment-md: #f1ebdf;
-  --parchment-dk: #e5dece;
+  --parchment:    #ede6de;
+  --parchment-md: #e5ddd4;
+  --parchment-dk: #d8cfc4;
   --ink:          #171411;
-  --ink-mid:      #484038;
-  --ink-muted:    #70675d;
-  --ink-light:    #a2978d;
-  --ink-faint:    #cfc5b8;
-  --rule:         #d2cabd;
-  --white:        #fffdfa;
+  --ink-mid:      #4a423a;
+  --ink-muted:    #72695f;
+  --ink-light:    #9f9388;
+  --ink-faint:    #c5baad;
+  --rule:         #cac0b4;
+  --white:        #f7f2ec;
 }
 
 html { scroll-behavior: smooth; }
@@ -51,7 +51,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 242, 232, 0.94);
+  background: rgba(237, 230, 222, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule);
   padding: 0 48px;
@@ -64,16 +64,14 @@ body {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 11px;
   text-decoration: none;
 }
 
-.nav-brand-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: 0.3px;
+.nav-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  mix-blend-mode: multiply;
 }
 
 .nav-links {
@@ -315,7 +313,7 @@ body {
 }
 
 .specialty-card {
-  background: #fbf7f0;
+  background: #f2ebe3;
   padding: 34px 28px;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
@@ -324,7 +322,7 @@ body {
   position: relative;
 }
 
-.specialty-card:hover { background: #f4eee4; transform: translateY(-1px); }
+.specialty-card:hover { background: #e9e1d7; transform: translateY(-1px); }
 
 .specialty-card.active-card {
   background: var(--ink);
@@ -402,7 +400,7 @@ body {
 }
 
 .about-inner {
-  background: #ece5d8;
+  background: #e3dbd1;
   padding: 44px 42px;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -805,12 +803,13 @@ ul.match-list { list-style: none; }
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 9px;
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink-mid);
-  white-space: nowrap;
+}
+
+.footer-logo {
+  display: block;
+  height: 38px;
+  width: auto;
+  mix-blend-mode: multiply;
 }
 
 /* ─── ANIMATIONS ─── */
@@ -848,6 +847,8 @@ ul.match-list { list-style: none; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--rule); padding: 22px 0; }
   .stat-item:last-child { border-bottom: none; }
   .nav-links { display: none; }
+  .nav-logo { height: 46px; }
+  .footer-logo { height: 32px; }
   .badge-row { flex-direction: column; align-items: flex-start; gap: 8px; }
   .section-header { flex-direction: column; gap: 4px; }
 }
@@ -858,16 +859,7 @@ ul.match-list { list-style: none; }
 <!-- ═══ NAVIGATION ═══ -->
 <nav class="site-nav">
   <a class="nav-brand" href="#" onclick="showPage('home'); return false;">
-    <svg width="24" height="24" viewBox="0 0 56 56" fill="none">
-      <circle cx="15" cy="9" r="3" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
-      <circle cx="41" cy="9" r="3" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
-      <path d="M15 12 L15 22 Q15 34 28 34" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M41 12 L41 22 Q41 34 28 34" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M28 34 Q28 42 36 42" stroke="#0f0d0a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <circle cx="36" cy="47" r="5.5" stroke="#0f0d0a" stroke-width="1.8" fill="none"/>
-      <circle cx="36" cy="47" r="2.5" fill="#0f0d0a"/>
-    </svg>
-    <span class="nav-brand-text">Black Men in Medicine</span>
+    <img class="nav-logo" src="logo-reference.png" alt="Black Men in Medicine" />
   </a>
   <div class="nav-links">
     <a class="nav-link active" id="nav-home" href="#" onclick="showPage('home'); return false;">Home</a>
@@ -913,8 +905,8 @@ ul.match-list { list-style: none; }
     </div>
     <div class="mission-stats">
       <div class="m-stat">
-        <span class="m-stat-num">2026</span>
-        <span class="m-stat-label">Archive launched · Foundational year</span>
+        <span class="m-stat-num">2017</span>
+        <span class="m-stat-label">Black Men in Medicine founded</span>
       </div>
       <div class="m-stat">
         <span class="m-stat-num">12</span>
@@ -1060,19 +1052,10 @@ ul.match-list { list-style: none; }
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-note">
-        © 2026 Black Men in Medicine. Data compiled and maintained independently. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
+        © Black Men in Medicine. Founded in 2017. Data compiled and maintained independently. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
       </p>
       <div class="footer-brand">
-        <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
-          <circle cx="15" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <circle cx="41" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <path d="M15 12 L15 22 Q15 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M41 12 L41 22 Q41 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M28 34 Q28 42 36 42" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <circle cx="36" cy="47" r="5.5" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <circle cx="36" cy="47" r="2.5" fill="#3a3530"/>
-        </svg>
-        Black Men in Medicine
+        <img class="footer-logo" src="logo-reference.png" alt="Black Men in Medicine" />
       </div>
     </div>
   </footer>
@@ -1209,16 +1192,7 @@ ul.match-list { list-style: none; }
         Data compiled and maintained by Black Men in Medicine. This list documents Black medical students who matched into neurological surgery residency programs in the 2026 NRMP cycle. For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
       </p>
       <div class="footer-brand">
-        <svg width="16" height="16" viewBox="0 0 56 56" fill="none">
-          <circle cx="15" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <circle cx="41" cy="9" r="3" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <path d="M15 12 L15 22 Q15 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M41 12 L41 22 Q41 34 28 34" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M28 34 Q28 42 36 42" stroke="#3a3530" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <circle cx="36" cy="47" r="5.5" stroke="#3a3530" stroke-width="1.8" fill="none"/>
-          <circle cx="36" cy="47" r="2.5" fill="#3a3530"/>
-        </svg>
-        Black Men in Medicine
+        <img class="footer-logo" src="logo-reference.png" alt="Black Men in Medicine" />
       </div>
     </div>
   </footer>
