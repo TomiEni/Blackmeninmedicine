@@ -787,19 +787,18 @@ ul.match-list { list-style: none; }
 .footer-inner {
   max-width: 860px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .footer-note {
   font-family: 'EB Garamond', serif;
-  font-size: 15px;
+  font-size: 12.5px;
   color: var(--ink-muted);
-  line-height: 1.75;
-  max-width: 560px;
+  line-height: 1.5;
+  max-width: 640px;
 }
 
 .footer-brand {
@@ -810,7 +809,7 @@ ul.match-list { list-style: none; }
 
 .footer-logo {
   display: block;
-  height: 58px;
+  height: 64px;
   width: auto;
   mix-blend-mode: multiply;
 }
@@ -842,7 +841,8 @@ ul.match-list { list-style: none; }
   .list-main { grid-template-columns: 1fr; padding: 36px 24px 64px; gap: 40px; }
   .sidebar { position: static; }
   .site-footer { padding: 28px 24px; }
-  .footer-logo { height: 48px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 18px; }
+  .footer-logo { height: 52px; }
 }
 
 @media (max-width: 560px) {
