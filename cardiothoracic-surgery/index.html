@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Black Men in Medicine is building a living archive of Black excellence in medicine across specialties, institutions, and match cycles." />
+<meta name="description" content="Black Men in Medicine documents the 2026 cardiothoracic surgery match as part of its living archive of Black excellence in medicine." />
 <meta name="theme-color" content="#f7f2e8" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Black Men in Medicine" />
-<meta name="twitter:description" content="A living archive documenting Black excellence in medicine across specialties, institutions, and match cycles." />
-<meta property="og:title" content="Black Men in Medicine" />
-<meta property="og:description" content="A living archive documenting Black excellence in medicine across specialties, institutions, and match cycles." />
+<meta name="twitter:title" content="Black Men in Medicine | 2026 Cardiothoracic Surgery Match Archive" />
+<meta name="twitter:description" content="A public-facing record of Black medical students who matched into cardiothoracic surgery in the 2026 cycle." />
+<meta property="og:title" content="Black Men in Medicine | 2026 Cardiothoracic Surgery Match Archive" />
+<meta property="og:description" content="A public-facing record of Black medical students who matched into cardiothoracic surgery in the 2026 cycle." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blackmeninmedicine.co/" />
+<meta property="og:url" content="https://blackmeninmedicine.co/cardiothoracic-surgery/" />
 <meta property="og:site_name" content="Black Men in Medicine" />
-<link rel="canonical" href="https://blackmeninmedicine.co/" />
-<title>Black Men in Medicine | Living Archive of Black Excellence in Medicine</title>
+<link rel="canonical" href="https://blackmeninmedicine.co/cardiothoracic-surgery/" />
+<title>Black Men in Medicine | 2026 Cardiothoracic Surgery Match Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -121,7 +121,7 @@ body {
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HOME PAGE
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-#home { display: block; }
+#home { display: none; }
 #list { display: block; }
 
 /* â”€â”€ HERO â”€â”€ */
@@ -785,7 +785,7 @@ ul.match-list { list-style: none; }
 }
 
 .footer-inner {
-  max-width: 920px;
+  max-width: 1120px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -796,10 +796,10 @@ ul.match-list { list-style: none; }
 
 .footer-note {
   font-family: 'EB Garamond', serif;
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--ink-muted);
-  line-height: 1.45;
-  max-width: 760px;
+  line-height: 1.4;
+  max-width: 920px;
   white-space: normal;
 }
 
@@ -867,213 +867,133 @@ ul.match-list { list-style: none; }
 
 <!-- â•â•â• NAVIGATION â•â•â• -->
 <nav class="site-nav">
-  <a class="nav-brand" href="index.html">
-    <img class="nav-logo" src="logo-reference.png" alt="Black Men in Medicine" />
+  <a class="nav-brand" href="../index.html">
+    <img class="nav-logo" src="../logo-reference.png" alt="Black Men in Medicine" />
   </a>
   <div class="nav-links">
-    <a class="nav-link active" href="index.html">Home</a>
-    <a class="nav-link" href="neurosurgery/">Match Lists</a>
+    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link active" href="index.html">Match Lists</a>
     <a class="nav-ig" href="https://instagram.com/blackmeninmedicine" target="_blank" rel="noopener">@blackmeninmedicine ↗</a>
   </div>
 </nav>
 
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     HOME PAGE
+     LIST PAGE
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-<div id="home">
+<div id="list">
 
   <!-- Hero -->
-  <section class="home-hero">
-    <div class="home-hero-eyebrow">Highlighting Black Excellence in Medicine</div>
-    <h1 class="home-hero-title">
-      The Living Archive of<br/><em>Black Excellence</em><br/>in Medicine
-    </h1>
-    <div class="home-divider">
-      <div class="home-divider-line"></div>
-      <span class="home-divider-mark">✦</span>
-      <div class="home-divider-line"></div>
+  <div class="list-hero">
+    <div class="list-hero-inner">
+      <div class="list-hero-eyebrow">
+        <div class="lhe-line"></div>
+        <span class="lhe-text">2026 Match Day · Specialty Series · Cardiothoracic Surgery</span>
+      </div>
+      <h1 class="list-hero-title">
+        7 Black Medical Students<br/><em>Matched into Cardiothoracic Surgery</em>
+      </h1>
+      <p class="list-hero-sub">A public-facing record of Black medical students who matched into cardiothoracic surgery in the 2026 cycle.</p>
     </div>
-    <p class="home-hero-sub">
-      A specialty-by-specialty, year-by-year archive of Black excellence in medicine, built with the permanence of a record rather than the pace of a post.
-    </p>
-    <a class="home-hero-cta" href="neurosurgery/">Enter the Archive →</a>
-  </section>
+  </div>
 
-  <!-- Mission -->
-  <section class="home-mission">
+  <!-- Stats -->
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
+      <div class="stat-item">
+        <span class="stat-num">7</span>
+        <span class="stat-desc">Students Matched</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2026</span>
+        <span class="stat-desc">Match Cycle</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Historic</span>
+        <span class="stat-desc">Largest Documented Class</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badge -->
+  <div class="badge-row">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      <span class="badge-text">Largest Documented Class to Date</span>
+    </div>
+    <span class="badge-caption">A notable milestone in the cardiothoracic surgery training pipeline</span>
+  </div>
+
+  <!-- Main content -->
+  <div class="list-main">
+
+    <!-- Roster -->
     <div>
-      <div class="mission-label">Our Mission</div>
-      <h2 class="mission-heading">A Sustainable Archive of Black Excellence in Medicine</h2>
-      <div class="mission-body">
-        <p>Black Men in Medicine exists to build and maintain a living archive that documents, celebrates, and preserves Black excellence across the physician pipeline.</p>
-        <p>This is not a one-time snapshot. The goal is a record that expands with every match cycle, across every major specialty, so that progress remains visible, citable, and difficult to ignore.</p>
-        <p>The archive is meant to carry both recognition and historical weight: it honors the people moving medicine forward while preserving a public record that can be referenced over time.</p>
-        <p>Representation matters. A permanent record matters too.</p>
+      <div class="list-header">
+        <span class="list-title">Documented Roster · Cardiothoracic Surgery</span>
+        <span class="list-meta">7 · 2026</span>
       </div>
+      <ul class="match-list">
+        <li class="match-item"><span class="match-num">01</span><div><span class="match-name">Adrienne R. Kambouris</span><span class="match-school">Northwestern University</span></div></li>
+        <li class="match-item"><span class="match-num">02</span><div><span class="match-name">Tyler Lackland</span><span class="match-school">Indiana University</span></div></li>
+        <li class="match-item"><span class="match-num">03</span><div><span class="match-name">Shane S. Scott</span><span class="match-school">University of Maryland</span></div></li>
+        <li class="match-item"><span class="match-num">04</span><div><span class="match-name">Muyiwa Winnie Adebayo</span><span class="match-school">UC Davis</span></div></li>
+        <li class="match-item"><span class="match-num">05</span><div><span class="match-name">Betemariam Sharew</span><span class="match-school">Cedars-Sinai</span></div></li>
+        <li class="match-item"><span class="match-num">06</span><div><span class="match-name">Oluwademilade Tega</span><span class="match-school">Stanford</span></div></li>
+        <li class="match-item"><span class="match-num">07</span><div><span class="match-name">Cornell Brooks</span><span class="match-school">Yale</span></div></li>
+      </ul>
     </div>
-    <div class="mission-stats">
-      <div class="m-stat">
-        <span class="m-stat-num">2017</span>
-        <span class="m-stat-label">Black Men in Medicine founded</span>
-      </div>
-      <div class="m-stat">
-        <span class="m-stat-num">12</span>
-        <span class="m-stat-label">Specialties being tracked · 2026</span>
-      </div>
-      <div class="m-stat">
-        <span class="m-stat-num">13K+</span>
-        <span class="m-stat-label">Instagram Followers · @blackmeninmedicine</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- Specialty Cards -->
-  <section class="home-specialties">
-    <div class="section-header">
-      <h2 class="section-title">Archive Overview</h2>
-      <span class="section-sub">Specialty by Specialty</span>
-    </div>
-    <div class="specialty-grid">
-      <a class="specialty-card active-card" href="neurosurgery/">
-        <span class="sc-label">Available Now</span>
-        <span class="sc-specialty">Featured Archive</span>
-        <div class="sc-footer">
-          <span class="sc-count">2026</span>
-          <div class="sc-right">
-            <span class="sc-year">View Current Record</span>
-            <span class="sc-arrow">→</span>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="s-card">
+        <span class="s-label">Why This Matters</span>
+        <p class="s-quote">"A record like this makes progress visible, specific, and harder to overlook."</p>
+        <div class="s-rule"></div>
+        <span class="s-attr">Black Men in Medicine · Archive Note</span>
+      </div>
+
+      <div class="s-card">
+        <span class="s-label">By the Numbers</span>
+        <div class="s-row"><span class="s-key">Students documented</span><span class="s-val">7</span></div>
+        <div class="s-row"><span class="s-key">Institutions represented</span><span class="s-val">7</span></div>
+        <div class="s-row"><span class="s-key">Milestone</span><span class="s-val">Record-high class</span></div>
+        <div class="s-row"><span class="s-key">Match cycle</span><span class="s-val">2026</span></div>
+      </div>
+
+      <a class="s-ig" href="mailto:blackmeninmedicine@gmail.com">
+        <div class="s-ig-inner">
+          <div class="s-ig-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f0ebe0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18v12H3z"/>
+              <path d="M3 7l9 7 9-7"/>
+            </svg>
+          </div>
+          <div>
+            <span class="s-ig-handle">blackmeninmedicine@gmail.com</span>
+            <span class="s-ig-sub">Corrections and institutional inquiries</span>
           </div>
         </div>
+        <span class="s-ig-arr">→</span>
       </a>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Orthopaedic Surgery</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">General Surgery</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <a class="specialty-card active-card" href="cardiothoracic-surgery/">
-        <span class="sc-label">Available Now</span>
-        <span class="sc-specialty">Cardiothoracic Surgery</span>
-        <div class="sc-footer">
-          <span class="sc-count">2026</span>
-          <div class="sc-right">
-            <span class="sc-year">View Current Record</span>
-            <span class="sc-arrow">→</span>
-          </div>
-        </div>
-      </a>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Emergency Medicine</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Dermatology</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Plastic Surgery</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Radiology</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Anaesthesiology</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Obstetrics & Gynaecology</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Psychiatry</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-      <div class="specialty-card coming-soon">
-        <span class="sc-label">Coming Soon</span>
-        <span class="sc-specialty">Paediatrics</span>
-        <div class="sc-footer">
-          <span class="sc-count">—</span>
-          <div class="sc-right"><span class="sc-year">Match 2026</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- About / CTA Strip -->
-  <section class="home-about">
-    <div class="about-inner">
-      <p class="about-quote">
-        "Every specialty. Every year. A <strong>sustained public record</strong> of Black excellence in medicine."
-      </p>
-      <div class="about-right">
-        <a class="about-handle" href="mailto:blackmeninmedicine@gmail.com">blackmeninmedicine@gmail.com</a>
-        <a class="about-ig-btn" href="https://instagram.com/blackmeninmedicine" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f0d0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.5" fill="#0f0d0a"/>
-          </svg>
-          Follow on Instagram
-        </a>
-      </div>
-    </div>
-  </section>
+  </div><!-- end list-main -->
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-note">
-        © Black Men in Medicine. Founded in 2017. Data compiled and maintained independently.<br />
+        Data compiled and maintained by Black Men in Medicine. This list documents Black medical students who matched into cardiothoracic surgery in the 2026 cycle.<br />
         For citation, institutional use, or corrections, contact via email at blackmeninmedicine@gmail.com or Instagram at @blackmeninmedicine.
       </p>
       <div class="footer-brand">
-        <img class="footer-logo" src="logo-reference.png" alt="Black Men in Medicine" />
+        <img class="footer-logo" src="../logo-reference.png" alt="Black Men in Medicine" />
       </div>
     </div>
   </footer>
 
-</div><!-- end #home -->
+</div><!-- end #list -->
 
 </body>
 </html>
